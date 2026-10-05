@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bgGradT1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#051020"/>
+      <stop offset="50%" stop-color="#081e36"/>
+      <stop offset="100%" stop-color="#122a4a"/>
+    </linearGradient>
+    <pattern id="radarGridT1" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f59e0b" stroke-width="0.5" stroke-opacity="0.2"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bgGradT1)"/>
+  <rect width="800" height="500" fill="url(#radarGridT1)"/>
+
+  <!-- Inundated coastal line with high flood water intrusion -->
+  <path d="M 0 0 L 260 0 C 290 140 210 210 270 300 C 310 370 230 460 200 500 L 0 500 Z" fill="#14241b" stroke="#1f3b2a"/>
+  
+  <!-- Submerged lowlands / Flood polygon (T1 delta) -->
+  <path d="M 260 0 C 290 140 210 210 270 300 C 310 370 230 460 200 500 L 320 500 C 360 410 420 330 360 260 C 280 180 360 110 330 0 Z" fill="#b91c1c" fill-opacity="0.45" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4,2"/>
+
+  <!-- Damaged Piers and displaced vessels -->
+  <polygon points="345,180 410,190 405,220 330,210" fill="#334155" stroke="#ef4444"/>
+  <polygon points="360,270 430,285 425,315 340,300" fill="#334155" stroke="#ef4444"/>
+
+  <!-- Drifting / displaced vessel -->
+  <rect x="520" y="240" width="70" height="18" rx="4" fill="#fca5a5" stroke="#ef4444" stroke-width="1.5" transform="rotate(25 520 240)"/>
+
+  <!-- Telemetry HUD & Warning Alert -->
+  <g font-family="monospace" font-size="11" fill="#f59e0b">
+    <text x="25" y="40">POST-EVENT PASS: SENTINEL-1 SAR / SENTINEL-2 MSI (T1)</text>
+    <text x="25" y="60">ACQUISITION TIMESTAMP: 2025-02-21 11:15:02 UTC (+7 DAYS)</text>
+    <text x="25" y="80" fill="#ef4444" font-weight="bold">ALERT: SEVERE INUNDATION DETECTED (+42.8 HA)</text>
+    <circle cx="310" cy="270" r="45" fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="365" y="275" fill="#fca5a5" font-size="10">BERTH OVERWASH / JETTY DAMAGE</text>
+  </g>
+</svg>

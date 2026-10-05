@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07172c"/>
+      <stop offset="60%" stop-color="#0a2540"/>
+      <stop offset="100%" stop-color="#143c68"/>
+    </linearGradient>
+    <linearGradient id="waterGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0b3d68"/>
+      <stop offset="100%" stop-color="#006699"/>
+    </linearGradient>
+    <pattern id="radarGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00f0ff" stroke-width="0.5" stroke-opacity="0.15"/>
+    </pattern>
+  </defs>
+
+  <!-- Deep Ocean Base -->
+  <rect width="800" height="500" fill="url(#bgGrad)"/>
+  <rect width="800" height="500" fill="url(#radarGrid)"/>
+
+  <!-- Coastal Landmass (T0 Pre-Event) -->
+  <path d="M 0 0 L 340 0 C 370 120 280 180 360 270 C 420 340 320 440 280 500 L 0 500 Z" fill="#1b3022" stroke="#2d5a3f" stroke-width="1.5"/>
+  <path d="M 0 0 L 320 0 C 350 110 265 175 345 265 C 400 330 305 430 260 500 L 0 500 Z" fill="#24422f"/>
+
+  <!-- Urban Port Concrete Docks & Piers -->
+  <polygon points="345,180 430,195 425,225 330,210" fill="#475569" stroke="#64748b"/>
+  <polygon points="360,270 480,290 475,320 340,300" fill="#475569" stroke="#64748b"/>
+  <polygon points="320,380 450,400 445,430 300,410" fill="#475569" stroke="#64748b"/>
+
+  <!-- Moored Cargo Ships (T0 baseline) -->
+  <rect x="435" y="198" width="55" height="16" rx="4" fill="#e2e8f0" stroke="#00f0ff" stroke-width="1"/>
+  <rect x="485" y="293" width="70" height="18" rx="4" fill="#e2e8f0" stroke="#00f0ff" stroke-width="1"/>
+  <rect x="455" y="403" width="60" height="16" rx="4" fill="#94a3b8" stroke="#38bdf8" stroke-width="1"/>
+
+  <!-- Coordinate HUD Telemetry Overlay -->
+  <g font-family="monospace" font-size="11" fill="#00f0ff">
+    <text x="25" y="40">OPTICAL SENSOR: SENTINEL-2 MSI (B4-B3-B2)</text>
+    <text x="25" y="60">ACQUISITION TIMESTAMP: 2025-02-14 09:42:18 UTC</text>
+    <text x="25" y="80">GSD: 10.0m | CLOUD COVER: 0.8% | EP-PORT SECTOR A</text>
+    <circle cx="462" cy="206" r="18" fill="none" stroke="#00f0ff" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="490" y="200" fill="#38bdf8" font-size="10">BERTH-01 [OCCUPIED]</text>
+  </g>
+</svg>
